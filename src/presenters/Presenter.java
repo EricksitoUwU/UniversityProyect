@@ -13,8 +13,8 @@ public class Presenter implements ActionListener {
 
     public Presenter(){
         taxCalculator = new TaxCalculator();
-        try {
-            taxCalculator.loadLand();
+        try { 
+            taxCalculator.loadLand();  //Carga los archivos
         } catch (IOException e) {
             e.printStackTrace();
         }

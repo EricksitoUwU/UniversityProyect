@@ -112,14 +112,8 @@ public class TaxCalculator {
                     , (int) (Math.random() * 6), Double.parseDouble(parts[5]) * 1000);
             System.out.println("" + property.toString());
         }
-    }
 
-    public static void main(String[] args) {
-        try {
-            new TaxCalculator().loadLand();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        
     }
 
 }
