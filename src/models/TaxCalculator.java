@@ -108,12 +108,14 @@ public class TaxCalculator {
         ArrayList<String> line = FileOperation.loadTextFile("src/resources/BOYACA_REG1.txt");
         for (int i = 1; i < line.size(); i++) {
             String[] parts = line.get(i).split("\t");
-            Property property = new Property(parts[2], parts[3], parts[4].compareTo("A")==0?Use.COMERCIAL:Use.RESIDENCIAL, Double.parseDouble(parts[5])
-                    , (int) (Math.random() * 6), Double.parseDouble(parts[5]) * 1000);
-            System.out.println("" + property.toString());
-        }
-
-        
+            Property property = new Property(parts[2] //Numero Catastral
+            ,parts[3] //Direccion
+            ,parts[4].compareTo("A")==0?Use.COMERCIAL:Use.RESIDENCIAL //Uso
+            ,Double.parseDouble(parts[5]) //Area
+            ,(int) (Math.random() * 6)  //Estrato escgido por RNG
+            ,Double.parseDouble(parts[5]) * 1000); //Avaluo Catastral = Area * 1000
+            System.out.println("" + property.toString()); 
+        }   
     }
 
 }
