@@ -77,5 +77,6 @@ public class Property{
                 ", cadastralAppraisal=" + cadastralAppraisal +
                 '}';
     }
+    //Estudien vagos
 
 }
