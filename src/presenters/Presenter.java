@@ -22,7 +22,7 @@ public class Presenter implements ActionListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // taxView = new TaxView();
+        taxView = new TaxView(this); //Inicia taxView
 
     }
 

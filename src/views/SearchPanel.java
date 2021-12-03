@@ -14,11 +14,15 @@ public class SearchPanel extends JPanel {
     }
 
     public void initComponents(ActionListener listener){
-        this.setLayout(new GridLayout());
+        this.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
         btnSearch = new JButton("Buscar predio: ");
-        add(btnSearch);
-        txtPropertyNumber = new JTextField(5);
-        add(txtPropertyNumber);
+        btnSearch.setSize(20, 20);
+        add(btnSearch, gbc); // Gbc con valores default
+        gbc.gridx = 1; // Grid x a 0
+        gbc.gridy = 0; // Grid Y a 0
+        txtPropertyNumber = new JTextField(15);
+        add(txtPropertyNumber,gbc);
     }
 
     public String getPropertyNumber(){
