@@ -12,7 +12,7 @@ public class TaxView extends JFrame {
     private CalculatePanel cp;
 
     public TaxView(ActionListener listener){
-        super("Calcular impuestos de un predio. ");
+        super("APP TAXES © Jorge, Erick, Carlos ");
         initComponents(listener);
         this.setSize(400,300); //Tamaño de la mondaquera esta
         // this.setExtendedState(JFrame.MAXIMIZED_BOTH); //QUIEN PUSO ESTA LINEA >:C pd. creo que fui yo XD
@@ -24,11 +24,13 @@ public class TaxView extends JFrame {
     public void initComponents(ActionListener listener){
         this.setLayout(new GridLayout(4,1));
         sp = new SearchPanel(listener);
-        sp.setBackground(Color.CYAN); //Color con propositos de testing
+        sp.setBackground(new Color( 46, 94, 170)); //Color con propositos de testing
         add(sp);
         dp = new DataPanel(listener);
+        dp.setBackground(new Color(188, 128, 52)); //cOLOR para puntos de stylo
         add(dp);
         cbp = new CheckboxPanel(listener);
+        
         add(cbp);
         cp = new CalculatePanel(listener);
         add(cp);
