@@ -1,9 +1,5 @@
 package persitence;
 
-import models.Property;
-import models.TaxCalculator;
-
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -20,15 +16,14 @@ public class FileOperation {
     public static ArrayList<String> loadTextFile(String path) throws IOException{
         ArrayList<String> list = new ArrayList<String>(); //genera un arrayList para guardar varias lineas
         BufferedReader buffer = new BufferedReader(new FileReader(path));   //Buffered reader para leer el archivo
-
         String line;
         for (int i = 0; i < 40; i++) {
             line = buffer.readLine();
             list.add(line);
         }
-        // while ((line = buffer.readLine()) != null){ //Este metodo es para leer ABSOLUTAMENTE TODO EL ARCHIVO
+        // while ((line = buffer.readLine()) != null){ //Este metodo es para leer ABSOLUTAMENTE el archivo
         // 	list.add(line);
-        // }
+        buffer.close();
         return list;
     }
 
